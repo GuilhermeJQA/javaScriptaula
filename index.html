@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" src="style.css">
+</head>
+<body>
+    
+    <script>
+
+        const produtos = [
+            { nome: "Produto 1", preco: 100 },
+            { nome: "Produto 2", preco: 50 },
+            { nome: "Produto 3", preco: 75 },
+        ];
+
+        
+        const produtosComAumento = produtos.map((produto) => {
+            const aumento = produto.preco * 0.015; // 1.5% em decimal
+            return {
+                ...produto,
+                preco: produto.preco + aumento,
+            };
+        });
+
+        console.log("Produtos")
+        console.log(produtos)
+        console.log("Produtos com aumento de 1.5%:");
+        console.log(produtosComAumento);
+    </script>
+</body>
+</html>
